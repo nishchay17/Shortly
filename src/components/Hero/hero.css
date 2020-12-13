@@ -45,6 +45,7 @@
     padding-left: 1rem;
   }
   .text-area {
+    margin-top: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,6 +55,7 @@
   .main-text {
     text-align: center;
     padding: 1rem;
+    padding-top: 0;
     line-height: 3rem;
     width: 100%;
     font-size: 2.5rem;
