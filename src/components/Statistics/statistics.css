@@ -1,0 +1,124 @@
+.statistics {
+  z-index: -2;
+  margin-top: 0;
+  padding-top: 1.5rem;
+  background-color: #eff1f7;
+  padding-bottom: 7rem;
+}
+
+.statistics-heading {
+  font-size: 2.5rem;
+}
+
+.statistics-lead {
+  padding-top: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--grayish-violet);
+}
+
+.statistics-card-group {
+  margin-top: 5rem;
+  align-items: flex-start;
+}
+
+.statistics-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2.2rem;
+  position: relative;
+}
+
+.statistics-card-lead {
+  font-weight: 500;
+  margin: 1rem 0;
+  color: var(--grayish-violet);
+}
+
+.statistics-card-heading {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.statistics-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--dark-violet);
+  transform: translate(2rem, -50%);
+}
+.statistics-card:nth-child(4) {
+  margin-top: 3rem;
+}
+
+.statistics-card:nth-child(7) {
+  margin-top: 6rem;
+}
+
+.line {
+  height: 0.5rem;
+  width: 7rem;
+  background-color: var(--cyan);
+  margin-top: 9rem;
+}
+.line-vertical {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .statistics {
+    padding-bottom: 5rem;
+    padding-top: 0;
+  }
+  .statistics-heading {
+    font-size: 1.7rem;
+    padding: 0 1rem;
+  }
+  .statistics-lead {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .statistics-card-group {
+    flex-direction: column;
+    display: relative;
+  }
+  .statistics-card {
+    margin: 0 1.5rem;
+    z-index: 1;
+  }
+  .statistics-card-heading {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .statistics-card-lead {
+    text-align: center;
+  }
+  .statistics-card-image {
+    left: 50%;
+    top: 50%;
+    padding: 1.5rem;
+    transform: translate(-50%, -220%);
+  }
+  .line {
+    display: none;
+  }
+  .line-vertical {
+    display: unset;
+    height: 5rem;
+    width: 0.5rem;
+    margin: auto;
+    background-color: var(--cyan);
+  }
+  .statistics-card:nth-child(4) {
+    margin-top: 0rem;
+  }
+  .statistics-card:nth-child(7) {
+    margin-top: 2rem;
+  }
+}

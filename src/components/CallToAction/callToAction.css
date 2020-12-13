@@ -1,0 +1,36 @@
+.call-to-action {
+  display: flex;
+  padding-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/bg-boost-desktop.svg");
+  background-repeat: round;
+  padding: 4rem;
+  background-color: var(--dark-violet);
+}
+
+.action-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.btn-action {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .action-heading {
+    font-size: 1.53rem;
+  }
+  .call-to-action {
+    padding: 3rem 0;
+  }
+  .action-container {
+    padding: 2.5rem;
+  }
+  .btn-action {
+    padding: 1rem 3rem;
+  }
+}
