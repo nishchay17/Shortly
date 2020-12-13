@@ -7,6 +7,8 @@
 }
 
 .input-box {
+  box-sizing: border-box;
+  z-index: 10;
   transform: translateY(-5rem);
   background-color: var(--dark-violet);
   display: flex;
@@ -19,24 +21,33 @@
 }
 
 .input-form {
+  box-sizing: border-box;
   margin: 0 2.5rem;
   transform: translateY(0.5rem);
-  display: grid;
-  grid-template-columns: 7fr 2fr;
+  display: flex;
   gap: 2.5rem;
 }
 
 .btn-form {
-  font-size: 1.4rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  width: 20%;
   padding: 1.15rem 2.5rem;
   border-radius: 0.5rem;
 }
 
+.btn-form:disabled {
+  cursor: not-allowed;
+}
+
 .input {
+  box-sizing: border-box;
   font-size: 1.4rem;
   padding: 0.7rem 2.5rem;
-  display: inline;
+  width: 80%;
   border-radius: 1rem;
+  font-weight: 500;
+  color: var(--grayish-violet);
   border: 0.2rem solid #00000000;
 }
 .input-error,
@@ -65,13 +76,26 @@
 
 /* result css */
 
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .result-url-item {
+  z-index: -10;
   background-color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: 0.3s ease-in slide-down;
 }
 
 .btn-copy {
@@ -84,6 +108,10 @@
 .shorten-url {
   color: var(--cyan);
   margin: 0;
+}
+
+.shorten-url::selection {
+  display: none;
 }
 
 .original-url {
@@ -121,6 +149,11 @@ textarea:focus {
   background-color: var(--dark-violet);
 }
 
+.btn-dark:hover {
+  background-color: var(--dark-violet);
+  opacity: 0.6;
+}
+
 .btn-dark:focus {
   background-color: var(--dark-violet);
 }
@@ -136,26 +169,30 @@ textarea:focus {
   }
   .input-box {
     padding: 1rem 0;
-    display: grid;
     justify-content: center;
     align-items: center;
   }
 
   .input-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    width: 90%;
     gap: 1rem;
   }
   .input {
     border-radius: 0.5rem;
     font-size: 1rem;
     margin: 0.1rem 0;
+    width: 100%;
+    padding: 0.7rem 1rem;
   }
 
   .btn-form {
+    width: 100%;
+    padding: 1rem 1rem;
     font-size: 1.4rem;
   }
+
+  /* result box */
 
   .result-url-item {
     flex-direction: column;
