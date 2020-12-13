@@ -171,13 +171,17 @@ textarea:focus {
     padding: 1rem 0;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
 
   .input-form {
     flex-direction: column;
     width: 90%;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    /* remove top */
   }
+
   .input {
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -190,6 +194,12 @@ textarea:focus {
     width: 100%;
     padding: 1rem 1rem;
     font-size: 1.4rem;
+  }
+  .error-message {
+    padding: 1rem;
+    top: 27%;
+    left: 2%;
+    position: absolute;
   }
 
   /* result box */

@@ -86,7 +86,6 @@
   }
   .statistics-card-group {
     flex-direction: column;
-    display: relative;
   }
   .statistics-card {
     margin: 0 1.5rem;
