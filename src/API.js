@@ -1,2 +1,2 @@
-const URL = "https://api.shrtco.de/v2";
+const URL = "https://api-ssl.bitly.com/v4/shorten";
 export default URL;

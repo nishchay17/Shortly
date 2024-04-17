@@ -3,13 +3,17 @@ import URL from "../../API";
 
 export const getShortLink = (originalLink) => {
   return axios
-    .get(`${URL}/shorten?url=${originalLink}`)
+    .post(URL, { long_url: originalLink }, {
+      headers: {
+        Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+      },
+    })
     .then((response) => {
       if (response.data.ok === false) {
         const data = { ok: false, error: response.data.error };
         return data;
       }
-      const link = response.data.result.full_short_link;
+      const link = response.data.link;
       const data = { ok: true, link };
       return data;
     })
